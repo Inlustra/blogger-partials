@@ -1,0 +1,33 @@
+<b:widget id='Header1' locked='false' title='Charlie Lou (Header)' type='Header' visible='true' xmlns:b=" "
+          xmlns:expr="http://www.w3.org/1999/xhtml" xmlns:data=" ">
+    <b:includable id='main'>
+        <div class='container'>
+            <div id='logo'>
+                <h1>
+                    <a expr:href='data:blog.homepageUrl' style='display: block'>
+                        <img expr:alt='data:title' expr:height='data:height'
+                             expr:id="data:widget.instanceId + '_headerimg'"
+                             expr:src='data:sourceUrl' expr:width='data:width'/>
+                    </a>
+                </h1>
+                <b:if cond="data:imagePlacement == 'BEFORE_DESCRIPTION'">
+                    <b:include name='description'/>
+                </b:if>
+            </div>
+        </div>
+    </b:includable>
+    <b:includable id='description'>
+        <p>
+            <data:description/>
+        </p>
+    </b:includable>
+    <b:includable id='title'>
+        <b:if cond='data:blog.url == data:blog.homepageUrl'>
+            <data:title/>
+            <b:else/>
+            <a expr:href='data:blog.homepageUrl'>
+                <data:title/>
+            </a>
+        </b:if>
+    </b:includable>
+</b:widget>

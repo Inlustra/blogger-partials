@@ -1,0 +1,43 @@
+{
+  "name": "blogger-partials",
+  "version": "1.0.0",
+  "description": "Blogger build system to automatically include partials of Blogger foles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/inlustra/BloggerPartials.git"
+  },
+  "keywords": [
+    "Blogger",
+    "template",
+    "html",
+    "include",
+    "partials"
+  ],
+  "author": "Thomas Nairn [thomas@thenairn.com]",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inlustra/BloggerPartials/issues"
+  },
+  "homepage": "https://github.com/inlustra/BloggerPartials#readme",
+  "devDependencies": {
+    "babel-preset-stage-0": "^6.16.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-file-include": "^1.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.0.0"
+  }
+}

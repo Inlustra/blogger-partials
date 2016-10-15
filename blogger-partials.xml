@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection'
+      xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <title>
+        <data:blog.pageTitle/>
+    </title>
+    <b:skin><![CDATA[#header .text{color:red;background:green}
+#layout{width:100%}
+#navigation ul li{color:red}
+]]></b:skin>
+</head>
+<body>
+<div id="layout">
+    <header>
+        <b:section id="Header" showaddelement='yes'>
+            <b:widget id='Header1' locked='false' title='Charlie Lou (Header)' type='Header' visible='true' xmlns:b=" "
+          xmlns:expr="http://www.w3.org/1999/xhtml" xmlns:data=" ">
+    <b:includable id='main'>
+        <div class='container'>
+            <div id='logo'>
+                <h1>
+                    <a expr:href='data:blog.homepageUrl' style='display: block'>
+                        <img expr:alt='data:title' expr:height='data:height'
+                             expr:id="data:widget.instanceId + '_headerimg'"
+                             expr:src='data:sourceUrl' expr:width='data:width'/>
+                    </a>
+                </h1>
+                <b:if cond="data:imagePlacement == 'BEFORE_DESCRIPTION'">
+                    <b:include name='description'/>
+                </b:if>
+            </div>
+        </div>
+    </b:includable>
+    <b:includable id='description'>
+        <p>
+            <data:description/>
+        </p>
+    </b:includable>
+    <b:includable id='title'>
+        <b:if cond='data:blog.url == data:blog.homepageUrl'>
+            <data:title/>
+            <b:else/>
+            <a expr:href='data:blog.homepageUrl'>
+                <data:title/>
+            </a>
+        </b:if>
+    </b:includable>
+</b:widget>
+
+        </b:section>
+    </header>
+    <navigation>
+        <b:section id="Navigation" showaddelement='no'>
+            <div id="navigation">
+    <ul>
+        <li>
+            Home
+        </li>
+        <li>
+            About
+        </li>
+        <li>
+            Food
+        </li>
+    </ul>
+</div>
+        </b:section>
+    </navigation>
+    <posts>
+        <b:section id="Posts" showaddelement='no'>
+            <div id="posts">
+    This is a post
+</div>
+        </b:section>
+    </posts>
+</div>
+<script>const test="TEST";</script>
+</body>
+</html>
