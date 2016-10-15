@@ -1,6 +1,6 @@
-<b:widget id='Header1' locked='false' title='Charlie Lou (Header)' type='Header' visible='true' xmlns:b=" "
-          xmlns:expr="http://www.w3.org/1999/xhtml" xmlns:data=" ">
-    <b:includable id='main'>
+<b:section id="Header" showaddelement='no' xmlns:b=" ">
+    <b:widget id='Header1' locked='false' title='Charlie Lou (Header)' type='Header' visible='true'
+              xmlns:expr="http://www.w3.org/1999/xhtml" xmlns:data=" ">
         <div class='container'>
             <div id='logo'>
                 <h1>
@@ -15,13 +15,9 @@
                 </b:if>
             </div>
         </div>
-    </b:includable>
-    <b:includable id='description'>
         <p>
             <data:description/>
         </p>
-    </b:includable>
-    <b:includable id='title'>
         <b:if cond='data:blog.url == data:blog.homepageUrl'>
             <data:title/>
             <b:else/>
@@ -29,5 +25,5 @@
                 <data:title/>
             </a>
         </b:if>
-    </b:includable>
-</b:widget>
+    </b:widget>
+</b:section>

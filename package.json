@@ -25,11 +25,13 @@
   "homepage": "https://github.com/inlustra/BloggerPartials#readme",
   "devDependencies": {
     "babel-preset-stage-0": "^6.16.0",
+    "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^1.0.0",
+    "gulp-html-entities": "0.0.3",
     "gulp-if": "^2.0.1",
     "gulp-inject": "^4.1.0",
     "gulp-rename": "^1.2.2",
