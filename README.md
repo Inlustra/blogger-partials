@@ -2,6 +2,9 @@
 
 #### A Blogger Template System built for the modern web (where possible)
 
+**Example**
+[http://blogger-partials.blogspot.co.uk/](http://blogger-partials.blogspot.co.uk/)
+
 **Features**
 
 * Gulp
