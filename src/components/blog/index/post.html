@@ -5,12 +5,12 @@
             <img class="card-img-top img-fluid" expr:src='data:post.firstImageUrl'/>
         </b:if>
         <div class="card-block">
-            <div class="card-title">
+            <div class="card-title text-primary">
                 <strong>
-                    <data:post.title/>
+                    <a expr:href='data:post.url'><data:post.title/></a>
                 </strong>
             </div>
-            <div class="card-text">
+            <div class="card-text text-muted">
                 <data:post.snippet/>
             </div>
         </div>
