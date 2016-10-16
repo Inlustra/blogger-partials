@@ -1,7 +1,10 @@
 #navigation {
-  ul {
-    li {
-      color: red;
+  nav {
+    &.navbar {
+      position: relative;
+      height: initial;
+      margin: initial;
+      padding: .5rem 1rem;
     }
   }
 }

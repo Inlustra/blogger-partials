@@ -1,15 +1,11 @@
-<div id="layout">
+<div id="layout" class="container">
     <header>
         @htmlinclude('components/header/header.html')
     </header>
-    <navigation>
-        <b:section id="Navigation" showaddelement='no'>
-            @htmlinclude('components/navigation/navigation.html')
-        </b:section>
-    </navigation>
-    <posts>
-        <b:section id="Posts" showaddelement='no'>
-            @htmlinclude('components/posts/posts.html')
-        </b:section>
-    </posts>
+    <div>
+        @htmlinclude('components/navigation/navigation.html')
+    </div>
+    <div>
+        @htmlinclude('components/blog/blog.html')
+    </div>
 </div>

@@ -3,12 +3,14 @@
       xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
       xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
+    <b:include data='blog' name='all-head-content'/>
     <title>
         <data:blog.pageTitle/>
     </title>
     <b:skin><![CDATA[@@include(@distcss)]]></b:skin>
 </head>
 <body>
+@htmlinclude('components/blogger-navbar/blogger-navbar.html')
 @htmlinclude('components/layout/layout.html')
 <script type='text/javascript'>
     /*<![CDATA[*/

@@ -1,0 +1,68 @@
+<div class='post'>
+    <div class='post-heading'>
+        <h2>
+            <data:post.title/>
+        </h2>
+        <span class='meta'>
+            <span class='bullet'/> <data:post.dateHeader/> <span class='bullet'/>
+        </span>
+    </div>
+    <div class='post-entry'>
+        <p>
+            <data:post.body/>
+        </p>
+        <span class='link_pages'/>
+        <div class='post-tags'>
+            <b:loop values='data:post.labels' var='label'>
+                <a expr:href='data:label.url' rel='tag'>
+                    <data:label.name/>
+                </a>
+                <b:if cond='data:label.isLast != &quot;true&quot;'>,</b:if>
+            </b:loop>
+        </div>
+    </div>
+    <div class='post-share'>
+        <div class='share-buttons'>
+            <div class='addthis_native_toolbox'/>
+        </div>
+        <div class='share-comments'>
+            <a expr:href='data:post.url'>
+                <data:post.numComments/>
+            </a>
+        </div>
+    </div>
+
+    <b:include name='nextprev'/>
+
+    <div class='post-author'>
+        <h4 class='block-heading'><span>About the Author</span></h4>
+        <div class='author-img'>
+            <img alt='' class='avatar avatar-110 photo' height='110'
+                 src='http://1.gravatar.com/avatar/f995c34e6a5cfaff38a739f55d46f5ed?s=110&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D110&amp;r=G'
+                 width='110'/>
+        </div>
+        <div class='author-text'>
+            <h4><a href='' rel='author' title=''>Sora Templates</a></h4>
+            <p>Lorem ipsum dolor sit amet, cotur acing elit. Ut euis eget dolor sit amet congue. Ut vira codo matis. Sed
+                lacia luctus magna ut sodales lorem.</p>
+            <span class='author-share'>
+                                                    <a href='#'><i class='fa fa-facebook round-icon'/></a>
+                                                    <a href='#'><i class='fa fa-twitter round-icon'/></a>
+                                                    <a href='#'><i class='fa fa-instagram round-icon'/></a>
+                                                    <a href='#'><i class='fa fa-google-plus round-icon'/></a>
+                                                    <a href='#'><i class='fa fa-pinterest round-icon'/></a>							<a
+                    href='http://#.tumblr.com/'><i class='fa fa-tumblr round-icon'/></a>
+                                                </span>
+        </div>
+    </div>
+
+    <!-- INCLUDE RELATED POSTS -->
+    <div class='post-related'>
+        <h4 class='block-heading'><span>You Might Also Like</span></h4>
+        <b:loop values='data:post.labels' var='label'>
+            <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels_thumbs&amp;max-results=6&quot;'
+                    type='text/javascript'/>
+        </b:loop>
+    </div>
+    <b:include data='post' name='threaded_comments'/>
+</div>

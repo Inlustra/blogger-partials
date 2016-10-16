@@ -1,29 +1,19 @@
-<b:section id="Header" showaddelement='no' xmlns:b=" ">
-    <b:widget id='Header1' locked='false' title='Charlie Lou (Header)' type='Header' visible='true'
-              xmlns:expr="http://www.w3.org/1999/xhtml" xmlns:data=" ">
-        <div class='container'>
-            <div id='logo'>
-                <h1>
-                    <a expr:href='data:blog.homepageUrl' style='display: block'>
+<b:section id='header2' showaddelement='yes'>
+    <b:widget id='Header1' locked='false' title='Charlie Lou (Header)' type='Header' visible='true'>
+        <b:includable id='main'>
+            <div class="title">
+                <b:if cond='data:useImage'>
+                    <div class="title-image">
                         <img expr:alt='data:title' expr:height='data:height'
-                             expr:id="data:widget.instanceId + '_headerimg'"
-                             expr:src='data:sourceUrl' expr:width='data:width'/>
-                    </a>
-                </h1>
-                <b:if cond="data:imagePlacement == 'BEFORE_DESCRIPTION'">
-                    <b:include name='description'/>
+                             expr:id='data:widget.instanceId + &quot;_headerimg&quot;'
+                             expr:src='data:sourceUrl' class="img-fluid"/>
+                    </div>
+                    <b:else/>
+                    <div class="title-text">
+                        <b:include name='title'/>
+                    </div>
                 </b:if>
             </div>
-        </div>
-        <p>
-            <data:description/>
-        </p>
-        <b:if cond='data:blog.url == data:blog.homepageUrl'>
-            <data:title/>
-            <b:else/>
-            <a expr:href='data:blog.homepageUrl'>
-                <data:title/>
-            </a>
-        </b:if>
+        </b:includable>
     </b:widget>
 </b:section>

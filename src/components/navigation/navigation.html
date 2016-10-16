@@ -1,13 +1,30 @@
-<div id="navigation">
-    <ul>
-        <li>
-            Home
-        </li>
-        <li>
-            About
-        </li>
-        <li>
-            Food
-        </li>
-    </ul>
-</div>
+<b:section id='navigation' showaddelement='yes'>
+    <b:widget id='LinkList1' locked='true' title='Blogger Partials' type='LinkList' visible='true'>
+        <b:includable id='main'>
+            <nav class="navbar navbar-dark bg-inverse">
+                <b:if cond='data:title'>
+                    <a class="navbar-brand" href="#">
+                        <data:title/>
+                    </a>
+                </b:if>
+                <ul class="nav navbar-nav">
+                    <b:loop values='data:links' var='link'>
+                        <b:if cond='data:blog.url == data:link.target'>
+                            <li class="nav-item active">
+                                <a class="nav-link" expr:href='data:link.target'>
+                                    <data:link.name/>
+                                </a>
+                            </li>
+                            <b:else/>
+                            <li class="nav-item">
+                                <a class="nav-link" expr:href='data:link.target'>
+                                    <data:link.name/>
+                                </a>
+                            </li>
+                        </b:if>
+                    </b:loop>
+                </ul>
+            </nav>
+        </b:includable>
+    </b:widget>
+</b:section>

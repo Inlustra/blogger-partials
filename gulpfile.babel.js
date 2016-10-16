@@ -13,6 +13,7 @@ const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const fileInclude = require('gulp-file-include');
 const entities = require('gulp-html-entities');
+const gutil = require('gulp-util');
 
 const DEBUG_ENABLED = argv.debug !== undefined;
 
@@ -31,7 +32,7 @@ const swallowError = () => {
 };
 
 gulp.task('scripts', () => {
-    return gulp.src(['src/**/*.js'].concat(libsJS))
+    return gulp.src(libsJS.concat(['src/**/*.js']))
         .pipe(babel())
         .pipe(gulpif(!DEBUG_ENABLED, concat(pkg.name + '.js').on('error', swallowError)))
         .pipe(gulpif(!DEBUG_ENABLED, uglify().on('error', swallowError)))
@@ -68,7 +69,10 @@ gulp.task('embed', () => {
         }))
         .pipe(fileInclude())
         .pipe(concat(`${pkg.name}.xml`))
-        .pipe(gulp.dest(`./`));
+        .pipe(gulp.dest(`./`)
+            .on('end', () => gutil.log(
+                '---------', gutil.colors.bgRed('READY TO GO'), '---------'
+            )));
 });
 
 gulp.task('watch', () => gulp.watch('src/**/*.*', ['build']));

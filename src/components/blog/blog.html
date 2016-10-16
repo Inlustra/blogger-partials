@@ -1,0 +1,14 @@
+<b:section class='main' id='blog' preferred='yes' showaddelement='no' xmlns:b=" ">
+    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+        <b:includable id='main' var='top'>
+            <b:if cond='data:blog.pageType == "index"'>
+                @htmlinclude('components/blog/index/container.html')
+            </b:if>
+        </b:includable>
+        <b:includable id='post' var='post'>
+            <b:if cond='data:blog.pageType == "index"'>
+                @htmlinclude('components/blog/index/post.html')
+            </b:if>
+        </b:includable>
+    </b:widget>
+</b:section>
