@@ -5,6 +5,15 @@
 **Example**
 [http://blogger-partials.blogspot.co.uk/](http://blogger-partials.blogspot.co.uk/)
 
+## Why?
+
+Blogger will currently only accept a single file in XML format, which provides developers with 0 context and a boat load of gross code.
+I invite anyone reading this to download a template from any of the "Free Blogger Template" websites and try to understand it.
+It's gross.
+
+I am no expert with blogger and have actually only put a few hours into the actual templating.
+I've never written a blog post ever. It was a challenge, and I wanted to give it a try! :)
+
 **Features**
 
 * Gulp
