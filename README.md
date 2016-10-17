@@ -17,7 +17,7 @@
 
 ## Getting Started
 
-1. Clone/Download this project: [Download]()
+1. Clone/Download version 0.1 of this project: [Download](https://github.com/Inlustra/blogger-partials/archive/0.1.zip)
 1. Install NodeJS and NPM: [Link](https://nodejs.org/en/download/package-manager/)
 2. Install the project pre-requisites
     * Install the gulp and bower by running: `npm install -g gulp-cli bower`
