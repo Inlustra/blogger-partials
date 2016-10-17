@@ -1,0 +1,27 @@
+{
+  "name": "blogger-partials",
+  "description": "Blogger build system to automatically include partials of Blogger foles",
+  "main": "index.js",
+  "authors": [
+    "Thomas Nairn [thomas@thenairn.com]"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Blogger",
+    "template",
+    "html",
+    "include",
+    "partials"
+  ],
+  "homepage": "https://github.com/Inlustra/blogger-partials",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.4"
+  }
+}
